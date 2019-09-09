@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">OSIS Election</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="sign_in">Sign In</string>
+    <string name="login">Login</string>
+    <string name="banner_title">OSIS\nElection</string>
+    <string name="logo_smk_taruna_bhakti">Logo SMK Taruna Bhakti</string>
+    <string name="scan">Scan</string>
+</resources>
