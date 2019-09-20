@@ -7,30 +7,27 @@
     tools:context=".MainActivity">
 
     <RelativeLayout
-        android:id="@+id/banner"
+        android:id="@+id/banner_main"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:background="@color/colorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/colorPrimary"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0">
 
-        <ImageView
-            android:id="@+id/banner_barcode"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_centerInParent="true"
-            android:src="@drawable/barcode" />
+        <com.journeyapps.barcodescanner.DecoratedBarcodeView
+            android:id="@+id/qr_scan"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
-<!--        <Button-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_below="@id/banner_barcode"-->
-<!--            android:layout_centerHorizontal="true"-->
-<!--            android:text="@string/scan"-->
-<!--            />-->
+        <ImageButton
+            android:id="@+id/imgbtn_scan"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:background="@drawable/barcode"
+            android:layout_centerInParent="true"/>
 
     </RelativeLayout>
 
@@ -41,25 +38,25 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent=".50" />
 
-    <ImageView
-        android:id="@+id/imageView"
+    <ImageButton
+        android:id="@+id/btn_logout"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:contentDescription="Sign out"
-        android:src="@drawable/ic_exit_to_app_24dp"
+        android:background="@drawable/ic_power_settings_new_24dp"
+        android:contentDescription="@string/sign_out"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <de.hdodenhof.circleimageview.CircleImageView
+    <ImageView
         android:id="@+id/tv_main_candidate_picture"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:src="@drawable/ic_account_circle_24dp"
         app:layout_constraintBottom_toTopOf="@+id/tv_main_candidate_name"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/banner" />
+        app:layout_constraintStart_toEndOf="@+id/banner_main" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tv_main_candidate_name"
@@ -67,10 +64,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:fontFamily="@font/googe_font_med"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/banner"
+        app:layout_constraintStart_toEndOf="@+id/banner_main"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.57"
         tools:text="John Doe" />
 
     <com.google.android.material.textview.MaterialTextView
@@ -79,50 +78,33 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        tools:text="100%"
+        android:fontFamily="@font/googe_font_med"
         android:textColor="@color/colorSuccess"
         app:layout_constraintEnd_toEndOf="@+id/tv_main_candidate_name"
         app:layout_constraintStart_toStartOf="@+id/tv_main_candidate_name"
-        app:layout_constraintTop_toBottomOf="@+id/tv_main_candidate_name" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_main_candidate_name"
+        tools:text="100%" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_visi"
+        style="@style/Widget.MaterialComponents.Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Visi"
+        android:fontFamily="@font/googe_font_med"
+        android:text="@string/visi"
         app:layout_constraintEnd_toStartOf="@+id/tv_main_candidate_vote"
         app:layout_constraintTop_toBottomOf="@+id/tv_main_candidate_vote" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_misi"
+        style="@style/Widget.MaterialComponents.Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Misi"
+        android:fontFamily="@font/googe_font_med"
+        android:text="@string/misi"
         app:layout_constraintStart_toEndOf="@+id/tv_main_candidate_vote"
         app:layout_constraintTop_toBottomOf="@+id/tv_main_candidate_vote" />
-
-<!--    <de.hdodenhof.circleimageview.CircleImageView-->
-<!--        android:layout_width="50dp"-->
-<!--        android:layout_height="50dp"-->
-<!--        android:src="@drawable/ic_launcher_background" />-->
-
-<!--    <TextView-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_gravity="center"-->
-<!--        android:text="John Doe \n100%" />-->
-
-<!--    <de.hdodenhof.circleimageview.CircleImageView-->
-<!--        android:layout_width="50dp"-->
-<!--        android:layout_height="50dp"-->
-<!--        android:src="@drawable/ic_launcher_background" />-->
-
-<!--    <TextView-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_gravity="center"-->
-<!--        android:text="John Doe \n100%" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

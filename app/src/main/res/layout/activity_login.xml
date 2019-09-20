@@ -7,7 +7,7 @@
     tools:context=".LoginActivity">
 
     <RelativeLayout
-        android:id="@+id/banner"
+        android:id="@+id/banner_login"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:background="@color/colorPrimary"
@@ -20,6 +20,7 @@
         <TextView
             style="@style/TextAppearance.AppCompat.Large.Inverse"
             android:layout_width="wrap_content"
+            android:fontFamily="@font/googe_font_med"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:text="@string/banner_title"
@@ -34,13 +35,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
+        android:fontFamily="@font/googe_font"
         android:text="@string/login"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintStart_toStartOf="@+id/linearLayout" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/logo_tb"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginTop="8dp"
@@ -61,7 +63,7 @@
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/banner"
+        app:layout_constraintStart_toEndOf="@+id/banner_login"
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputLayout
@@ -76,7 +78,9 @@
                 android:id="@+id/input_username"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/username" />
+                android:hint="@string/username"
+                android:inputType="textEmailAddress"
+                android:selectAllOnFocus="true" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -85,6 +89,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:nextFocusUp="@id/btn_login"
             app:errorEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -92,17 +97,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/password"
-                android:nextFocusUp="@id/btn_login"
-                android:inputType="textPassword" />
-
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:selectAllOnFocus="true" />
         </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_login"
+        style="@style/Widget.MaterialComponents.Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/sign_in"
+        android:fontFamily="@font/googe_font_med"
         app:layout_constraintEnd_toEndOf="@+id/linearLayout"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
@@ -111,6 +118,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent=".50"/>
+        app:layout_constraintGuide_percent=".50" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
