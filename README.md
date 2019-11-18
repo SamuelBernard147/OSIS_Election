@@ -1,5 +1,5 @@
 # OSIS_Election
-Aplikasi pemilihan OSIS dengan Qrcode
+OSIS selection application with Qr Code
 
 TODO :
-- Rapihin retrofit interface
+- Clean up code
