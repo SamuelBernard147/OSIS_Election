@@ -88,9 +88,11 @@ public class MainActivity extends AppCompatActivity {
                 String[] data = result.getText().split("-");
 //                Toast.makeText(MainActivity.this, data[0], Toast.LENGTH_SHORT).show();
 //                Toast.makeText(MainActivity.this, data[1], Toast.LENGTH_SHORT).show();
-                qrCodeScanner.setVisibility(GONE);
-                imgbtnScan.setVisibility(View.VISIBLE);
-                checkVoter(data[0], data[1]);
+                if (data.length>1){
+                    qrCodeScanner.setVisibility(GONE);
+                    imgbtnScan.setVisibility(View.VISIBLE);
+                    checkVoter(data[0], data[1]);
+                }
             }
 
             @Override

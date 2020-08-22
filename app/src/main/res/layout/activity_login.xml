@@ -20,9 +20,9 @@
         <TextView
             style="@style/TextAppearance.AppCompat.Large.Inverse"
             android:layout_width="wrap_content"
-            android:fontFamily="@font/googe_font_med"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
+            android:fontFamily="@font/googe_font_med"
             android:text="@string/banner_title"
             android:textSize="42sp"
             android:textStyle="bold" />
@@ -108,8 +108,8 @@
         style="@style/Widget.MaterialComponents.Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/sign_in"
         android:fontFamily="@font/googe_font_med"
+        android:text="@string/sign_in"
         app:layout_constraintEnd_toEndOf="@+id/linearLayout"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 

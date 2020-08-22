@@ -10,10 +10,10 @@
         android:id="@+id/banner_main"
         android:layout_width="0dp"
         android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintStart_toStartOf="parent"
-        android:background="@color/colorPrimary"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0">
 
@@ -26,8 +26,8 @@
             android:id="@+id/imgbtn_scan"
             android:layout_width="200dp"
             android:layout_height="200dp"
-            android:background="@drawable/barcode"
-            android:layout_centerInParent="true"/>
+            android:layout_centerInParent="true"
+            android:background="@drawable/barcode" />
 
     </RelativeLayout>
 
